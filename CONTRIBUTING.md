@@ -72,18 +72,20 @@ Use these labels when appropriate:
 ### Current Categories:
 - **Official Resources** - Official Cesium documentation and tools
 - **Community** - Forums, discussions, social platforms
-- **Learning Resources** - Tutorials, blogs, videos, books
+- **Learning Resources** - Tutorials, blogs, and videos
 - **Framework Integration** - Angular, Vue, React integrations
 - **Game Engine Integration** - Unity, Unreal, Godot support
 - **Data Processing** - Terrain building, 3D model conversion
 - **Libraries & Plugins** - Third-party extensions and tools
+- **Performance & Optimization** - Rendering and runtime performance helpers
+- **AI Integration** - MCP servers, agent skills, and AI tooling
 - **SDK & Development Frameworks** - Complete development platforms
 - **Open Source Projects** - Community projects and examples
 - **Applications** - Real-world applications and demos
-- **Showcases** - Demonstrations and galleries
-- **Data Sources** - Geospatial data providers
+- **Data Sources & Platform** - Geospatial data providers and platforms
 - **Tools** - Development and utility tools
 - **Ecosystem** - Related projects and integrations
+- **Future & Emerging** - Near-term ecosystem directions
 
 ### Adding New Categories:
 If you believe a new category is needed:

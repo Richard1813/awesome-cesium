@@ -22,10 +22,9 @@ categories:
     priority: 3
     subcategories:
       - "Tutorials"
-      - "Blogs" 
+      - "Blogs"
       - "Videos"
-      - "Books"
-      
+
   - name: "Framework Integration"
     description: "Integration with popular frontend frameworks"
     priority: 4
@@ -33,33 +32,28 @@ categories:
       - "Angular"
       - "Vue"
       - "React"
-      
+
   - name: "Game Engine Integration"
     description: "Integration with game engines and 3D platforms"
     priority: 5
-    
+
   - name: "Data Processing"
     description: "Tools for processing and converting geospatial data"
     priority: 6
     subcategories:
       - "Terrain Building"
       - "3D Model Converting"
-      
+      - "AEC & BIM Export"
+
   - name: "Libraries & Plugins"
     description: "Third-party libraries and plugins extending Cesium functionality"
     priority: 7
     subcategories:
       - "UI"
-      - "Graphics"
-      - "Data Management"
       - "Data Visualization"
       - "Data Providers"
-      - "Data Processing & Conversion"
-      - "Plotting & Drawing"
-      - "Editor Tools"
       - "Material & Shader Effects"
       - "GPS & Tracking"
-      - "Input & Interaction"
 
 quality_standards:
   github_repo:
