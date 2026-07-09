@@ -19,7 +19,6 @@
 - [SDK 与开发框架](#sdk-与开发框架)
 - [开源项目](#开源项目)
 - [应用案例](#应用案例)
-- [展示案例](#展示案例)
 - [数据源与平台](#数据源与平台)
 - [工具](#工具)
 - [生态系统](#生态系统)
@@ -33,22 +32,17 @@
 
 初次使用 Cesium？从这里开始：
 
-**官方文档** — 教程与 API 参考。参见下方官方资源章节。
-
-**Sandcastle** — 交互式代码示例（现已支持 [AI 语义搜索](https://cesium.com/blog/2026/03/19/ai-driven-semantic-search-sandcastle/)）。参见下方展示案例章节。
-
-**框架**：Vue → vue-cesium 🌟 | React → resium 🌟。参见下方框架集成章节。
-
-**示例**：200+ 演示 🌟。参见下方开源项目章节。
-
-- 新项目推荐技术栈：Vue 3 + Vite（cesium-vue3-vite 或 vue-cesium） | React（resium） | Vite（cesium-vite-example + vite-plugin-cesium）。参见框架集成和工具章节。
+- 官方资源 — 文档、Sandcastle 与核心库。
+- 框架集成 — Vue（`vue-cesium`）或 React（`resium`）。
+- 工具 — Vite 起步示例（`cesium-vite-example`）或打包插件（`vite-plugin-cesium`）。
+- 开源项目 / 应用案例 — 演示与接近生产的应用。
 
 ## 官方资源
 
 - [Cesium 官网](https://cesium.com/) - Cesium 官方网站，包含文档和资源.
 - [CesiumJS 库](https://cesium.com/cesiumjs/) - 用于 3D 地球和地图的主要 JavaScript 库.
 - [官方文档](https://cesium.com/learn/) - 完整文档、教程与 API 参考.
-- [Sandcastle](https://sandcastle.cesium.com/) - 交互式代码示例与演示.
+- [Sandcastle](https://sandcastle.cesium.com/) - 交互式代码示例与演示，支持 AI 语义搜索.
 - [GitHub 仓库](https://github.com/CesiumGS/cesium) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesium?style=flat&logo=github) CesiumJS 官方开源仓库.
 - [Cesium Native](https://github.com/CesiumGS/cesium-native) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesium-native?style=flat&logo=github) 基础 C++ 库，用于 3D Tiles、地形和地理空间处理，驱动 Cesium for Unreal、Unity 和 Omniverse.
 - [3D Tiles 规范](https://github.com/CesiumGS/3d-tiles) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/3d-tiles?style=flat&logo=github) 流式 3D 地理空间内容的开放规范.
@@ -63,7 +57,7 @@
 
 ### 教程
 
-- CesiumJS 官方教程 — 面向初学者的循序渐进教程和学习资源。参见上方官方资源章节。
+- [CesiumJS 官方教程](https://cesium.com/learn/cesiumjs/tutorials/) - 面向初学者的循序渐进教程和学习资源.
 
 ### 博客
 
@@ -72,10 +66,6 @@
 ### 视频
 
 - [Cesium YouTube 频道](https://www.youtube.com/cesium) - 官方教程、演示和会议演讲.
-
-### 书籍
-
-- 3D Geospatial Visualization with CesiumJS（书目链接待补充）。
 
 ## 框架集成
 
@@ -124,10 +114,6 @@
 
 - [cesium-navigation](https://github.com/brickhouse-tech/cesium-navigation) - ![GitHub stars](https://img.shields.io/github/stars/brickhouse-tech/cesium-navigation?style=flat&logo=github) TypeScript 指南针、缩放导航与距离比例尺控件（v6，无遗留依赖）.
 
-### 数据管理
-
-构建和打包指南请参见官方文档。
-
 ### 数据可视化
 
 - [ol-cesium](https://github.com/openlayers/ol-cesium) - ![GitHub stars](https://img.shields.io/github/stars/openlayers/ol-cesium?style=flat&logo=github) OpenLayers 与 Cesium 集成，支持 2D/3D 地图切换.
@@ -142,20 +128,16 @@
 
 ### 材质与着色器效果
 
-> 欢迎贡献活跃维护的材质插件。
+- [Custom Shader Guide](https://github.com/CesiumGS/cesium/blob/main/Documentation/CustomShaderGuide/README.md) - CesiumJS 官方 `CustomShader` 指南，适用于模型与 3D Tiles.
+- [CustomShader API](https://cesium.com/learn/cesiumjs/ref-doc/CustomShader.html) - 自定义 GLSL 材质与光照钩子的 API 参考.
 
 ### GPS 与跟踪
 
 - [cesium-gpx-viewer](https://github.com/Duckiduc/cesium-gpx-viewer) - ![GitHub stars](https://img.shields.io/github/stars/Duckiduc/cesium-gpx-viewer?style=flat&logo=github) 基于 React.js 的 GPS 轨迹 GPX 查看器.
 
-### 输入与交互
-
-> 欢迎贡献活跃维护的交互插件。
-
 ## 性能与优化
 
 - [cesium-gpu-points-layer](https://github.com/vadimrostok/cesium-gpu-points-layer) - ![GitHub stars](https://img.shields.io/github/stars/vadimrostok/cesium-gpu-points-layer?style=flat&logo=github) GPU 加速图元，以 Billboard 级性能渲染和动画化数百万动态标注.
-- 构建和包优化请参见官方文档。
 
 ## AI 集成
 
@@ -190,14 +172,9 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 - [MapStore2](https://github.com/geosolutions-it/MapStore2) - ![GitHub stars](https://img.shields.io/github/stars/geosolutions-it/MapStore2?style=flat&logo=github) 开源框架，支持创建和共享地图、仪表盘和地理故事，集成 Cesium 3D 支持.
 - [SuperMap iClient-JavaScript](https://github.com/SuperMap/iClient-JavaScript) - ![GitHub stars](https://img.shields.io/github/stars/SuperMap/iClient-JavaScript?style=flat&logo=github) 现代 GIS Web 客户端，支持 Leaflet、OpenLayers、MapboxGL 和 CesiumJS，集成 ECharts、D3 和 MapV.
 
-## 展示案例
-
-- Cesium Sandcastle — Cesium 功能和能力的官方交互式展示。
-- Cesium ion — 3D 内容流式传输、摄影测量、地形与真实世界数据的云平台。
-
 ## 数据源与平台
 
-- Cesium Ion — 3D 地理空间内容的流式传输、托管与处理云平台；含地形、影像、3D Tiles、摄影测量。
+- [Cesium Ion](https://ion.cesium.com/) - 3D 地理空间内容的流式传输、托管与处理云平台；含地形、影像、3D Tiles、摄影测量.
 - [OpenStreetMap](https://www.openstreetmap.org/) - 提供全球地图数据的协作平台.
 - [Natural Earth](https://www.naturalearthdata.com/) - 公共领域地图数据集.
 - [PMTiles](https://github.com/protomaps/PMTiles) - ![GitHub stars](https://img.shields.io/github/stars/protomaps/PMTiles?style=flat&logo=github) 单文件地图瓦片格式，支持离线部署和静态托管，兼容 Cesium.
@@ -210,12 +187,10 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 - [cesiumjs-workshop](https://github.com/CesiumGS/cesiumjs-workshop) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesiumjs-workshop?style=flat&logo=github) 2025 Cesium 开发者大会深度研讨材料.
 - [cesium-vite-example](https://github.com/CesiumGS/cesium-vite-example) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesium-vite-example?style=flat&logo=github) 官方 CesiumJS + Vite 最小示例项目.
 - [vite-plugin-cesium](https://github.com/nshen/vite-plugin-cesium) - ![GitHub stars](https://img.shields.io/github/stars/nshen/vite-plugin-cesium?style=flat&logo=github) 社区 Vite 插件，零配置处理 Cesium 静态资源与打包.
-- CesiumJS 构建和打包说明请参见官方文档。
 
 ## 生态系统
 
 - [cesium-omniverse](https://github.com/CesiumGS/cesium-omniverse) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesium-omniverse?style=flat&logo=github) NVIDIA Omniverse 平台的 Cesium 连接器.
-- 参见上文「游戏引擎集成」与「未来与前沿」章节。
 
 ## 未来与前沿
 
@@ -270,6 +245,13 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 
 - 本列表已移除：*angular-cesium* (2019)、*cesium-vue* (2018)、*d3cesium* (2015)、*cesium-vr* (2015)。详见 Git 历史。
 
+## 相关列表
+
+- [Awesome 3D Tiles](https://github.com/pka/awesome-3d-tiles) - 覆盖 CesiumJS 之外更广的 3D Tiles 生态.
+- [Awesome Frontend GIS](https://github.com/JoeWDavies/awesome-frontend-gis) - 浏览器端 GIS 框架、工具与演示.
+- [Awesome GIS](https://github.com/sshuair/awesome-gis) - 通用地理空间工具、库与学习资源.
+- [Awesome Geospatial](https://github.com/sacridini/Awesome-Geospatial) - 跨语言地理空间软件大型索引.
+
 ## 贡献
 
 欢迎您的贡献。请先查看[贡献指南](CONTRIBUTING.md)。
@@ -292,12 +274,10 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 
 ---
 
-> 最后更新：2026 年 6 月。
-> 活跃资源：55+。
-> 已归档：16。
-> 分类数：14。
-
-**图例说明：** **推荐** 表示活跃维护、广泛使用、面向未来（部分条目以星标标出）；适合学习的条目可作为入门参考；已弃用资源见「已归档/历史」一节。
+> 最后更新：2026 年 7 月。
+> 活跃资源：65+。
+> 已归档：17。
+> 分类数：16。
 
 主列表仅含活跃维护资源，基于 CesiumJS 1.x（当前 1.140）。详见[收录标准](docs/INCLUSION_CRITERIA.zh.md)。
 
