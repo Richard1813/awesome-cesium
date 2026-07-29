@@ -24,6 +24,7 @@
 - [生态系统](#生态系统)
 - [未来与前沿](#未来与前沿)
 - [已归档/历史](#已归档历史)
+- [相关列表](#相关列表)
 - [贡献](#贡献)
 
 ---
@@ -42,7 +43,7 @@
 - [Cesium 官网](https://cesium.com/) - Cesium 官方网站，包含文档和资源.
 - [CesiumJS 库](https://cesium.com/cesiumjs/) - 用于 3D 地球和地图的主要 JavaScript 库.
 - [官方文档](https://cesium.com/learn/) - 完整文档、教程与 API 参考.
-- [Sandcastle](https://sandcastle.cesium.com/) - 交互式代码示例与演示，支持 AI 语义搜索.
+- [Sandcastle](https://sandcastle.cesium.com/) - 交互式代码示例与演示，支持 AI 语义搜索与 Sandcastle Copilot（自带 LLM Key）.
 - [GitHub 仓库](https://github.com/CesiumGS/cesium) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesium?style=flat&logo=github) CesiumJS 官方开源仓库.
 - [Cesium Native](https://github.com/CesiumGS/cesium-native) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesium-native?style=flat&logo=github) 基础 C++ 库，用于 3D Tiles、地形和地理空间处理，驱动 Cesium for Unreal、Unity 和 Omniverse.
 - [3D Tiles 规范](https://github.com/CesiumGS/3d-tiles) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/3d-tiles?style=flat&logo=github) 流式 3D 地理空间内容的开放规范.
@@ -58,14 +59,17 @@
 ### 教程
 
 - [CesiumJS 官方教程](https://cesium.com/learn/cesiumjs/tutorials/) - 面向初学者的循序渐进教程和学习资源.
+- [用 AI 构建 CesiumJS 飞行模拟器](https://cesium.com/learn/cesiumjs-learn/build-a-flight-simulator-with-cesiumjs-using-ai/) - 🆕 **New** 官方指南：使用 AI 编程助手、React 与 TypeScript 构建 CesiumJS 飞行模拟器.
 
 ### 博客
 
 - [Cesium 官方博客](https://cesium.com/blog/) - 最新新闻、功能、技术见解和真实案例.
+- [Introducing CesiumJS Sandcastle Copilot](https://cesium.com/blog/2026/07/07/introducing-cesiumjs-sandcastle-copilot/) - 🆕 **New** Sandcastle 内置 AI 对话面板，用于编写、编辑与调试 CesiumJS 示例（自带 LLM Key）.
 
 ### 视频
 
 - [Cesium YouTube 频道](https://www.youtube.com/cesium) - 官方教程、演示和会议演讲.
+- [Cesium Developer Conference 2026](https://cesium.com/events/cesium-developer-conference/2026/) - 🆕 **New** 免费会议录像，涵盖 3D Tiles、高斯泼溅、数字孪生、Unity/Unreal 与 WebXR.
 
 ## 框架集成
 
@@ -113,6 +117,9 @@
 ### 用户界面
 
 - [cesium-navigation](https://github.com/brickhouse-tech/cesium-navigation) - ![GitHub stars](https://img.shields.io/github/stars/brickhouse-tech/cesium-navigation?style=flat&logo=github) TypeScript 指南针、缩放导航与距离比例尺控件（v6，无遗留依赖）.
+- [cesium-extends](https://github.com/hongfaqiu/cesium-extends) - ![GitHub stars](https://img.shields.io/github/stars/hongfaqiu/cesium-extends?style=flat&logo=github) 模块化 CesiumJS 扩展套件，提供测量、绘图、tooltip、popup、双屏联动、指南针、热力图与 GeoJSON 样式.
+- [cesium-transform-controls](https://github.com/123164867376464646/cesium-transform-controls) - ![GitHub stars](https://img.shields.io/github/stars/123164867376464646/cesium-transform-controls?style=flat&logo=github) 🆕 **New** 面向 Cesium 实体与模型的可视化平移、旋转、缩放控制器.
+- [cesium-player-controller](https://github.com/hh-hang/cesium-player-controller) - ![GitHub stars](https://img.shields.io/github/stars/hh-hang/cesium-player-controller?style=flat&logo=github) 🆕 **New** 一/三人称角色控制器，支持胶囊体碰撞、动画与相机避障.
 
 ### 数据可视化
 
@@ -120,6 +127,7 @@
 - [3DTilesRendererJS](https://github.com/NASA-AMMOS/3DTilesRendererJS) - ![GitHub stars](https://img.shields.io/github/stars/NASA-AMMOS/3DTilesRendererJS?style=flat&logo=github) Three.js 的 3D Tiles 渲染器.
 - [cesium-vectortile-gl](https://github.com/mesh-3d/cesium-vectortile-gl) - ![GitHub stars](https://img.shields.io/github/stars/mesh-3d/cesium-vectortile-gl?style=flat&logo=github) 原生 Primitive 矢量瓦片渲染器，支持 MVT/GeoJSON 与 MapLibre 样式、合批与 GPU 剔除.
 - [cesium-wind-layer](https://github.com/hongfaqiu/cesium-wind-layer) - ![GitHub stars](https://img.shields.io/github/stars/hongfaqiu/cesium-wind-layer?style=flat&logo=github) GPU 加速风场粒子可视化，支持地形遮挡.
+- [cesium-clouds-atmosphere](https://github.com/yuwoniu03/cesium-clouds-atmosphere) - ![GitHub stars](https://img.shields.io/github/stars/yuwoniu03/cesium-clouds-atmosphere?style=flat&logo=github) 🆕 **New** CesiumJS 体积云、Bruneton 大气、空中透视与镜头光晕渲染库.
 
 ### 数据提供者
 
@@ -150,6 +158,8 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 
 ### Agent 技能与工具
 
+- [cesiumjs-skills](https://github.com/CesiumGS/cesiumjs-skills) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesiumjs-skills?style=flat&logo=github) 🆕 **New** 官方精选 CesiumJS Agent Skills，供 AI 编程助手使用.
+- [Cesium-Skills](https://github.com/OpenCesium/Cesium-Skills) - ![GitHub stars](https://img.shields.io/github/stars/OpenCesium/Cesium-Skills?style=flat&logo=github) 🆕 **New** 社区 CesiumJS Agent Skills，约 185 个 JS 示例，覆盖地形、3D Tiles 与特效，适配 Cursor / Codex / Claude.
 - [Cesium VS Code 扩展](https://github.com/CesiumGS/cesium/pull/13059) - 🧪 **实验性** — CesiumJS 官方 VS Code 扩展（草案，开发中）.
 - [Context7 Cesium Server](https://context7.com/) - MCP 服务器，为 AI 工具提供实时 CesiumJS 文档和 API 参考，减少幻觉.
 
@@ -164,6 +174,9 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 
 ## 应用案例
 
+- [cesium-flight-simulator](https://github.com/WilliamAvHolmberg/cesium-flight-simulator) - ![GitHub stars](https://img.shields.io/github/stars/WilliamAvHolmberg/cesium-flight-simulator?style=flat&logo=github) 🆕 **New** 浏览器端飞行与地面载具模拟器，基于真实 Cesium 地形，使用 React 与 TypeScript.
+- [GeoLibre](https://github.com/opengeos/GeoLibre) - ![GitHub stars](https://img.shields.io/github/stars/opengeos/GeoLibre?style=flat&logo=github) 🆕 **New** 云原生 GIS 平台，可选 CesiumJS 三维地球窗格，并与 MapLibre 二维地图相机同步.
+- [velocity](https://github.com/AndrewCTF/velocity) - ![GitHub stars](https://img.shields.io/github/stars/AndrewCTF/velocity?style=flat&logo=github) 🆕 **New** 自托管 OSINT 态势控制台，在同一 Cesium 地球上融合飞机、船舶、卫星、地震与冲突事件.
 - [worldwideview](https://github.com/silvertakana/worldwideview) - ![GitHub stars](https://img.shields.io/github/stars/silvertakana/worldwideview?style=flat&logo=github) 模块化实时态势感知平台，基于插件架构在 CesiumJS 地球上渲染实时地理空间数据.
 - [satellite-js](https://github.com/shashwatak/satellite-js) - ![GitHub stars](https://img.shields.io/github/stars/shashwatak/satellite-js?style=flat&logo=github) 基于 TLE 数据的卫星轨道计算库，常与 Cesium 配合用于轨道可视化.
 - [satvis](https://github.com/Flowm/satvis) - ![GitHub stars](https://img.shields.io/github/stars/Flowm/satvis?style=flat&logo=github) 高级卫星轨道可视化和过境预测.
@@ -187,6 +200,8 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 - [cesiumjs-workshop](https://github.com/CesiumGS/cesiumjs-workshop) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesiumjs-workshop?style=flat&logo=github) 2025 Cesium 开发者大会深度研讨材料.
 - [cesium-vite-example](https://github.com/CesiumGS/cesium-vite-example) - ![GitHub stars](https://img.shields.io/github/stars/CesiumGS/cesium-vite-example?style=flat&logo=github) 官方 CesiumJS + Vite 最小示例项目.
 - [vite-plugin-cesium](https://github.com/nshen/vite-plugin-cesium) - ![GitHub stars](https://img.shields.io/github/stars/nshen/vite-plugin-cesium?style=flat&logo=github) 社区 Vite 插件，零配置处理 Cesium 静态资源与打包.
+- [vite-plugin-cesium-build](https://github.com/s3xysteak/vite-plugin-cesium-build) - ![GitHub stars](https://img.shields.io/github/stars/s3xysteak/vite-plugin-cesium-build?style=flat&logo=github) 自动化 Cesium 资源拷贝与构建配置的 Vite 插件，可选支持 `@cesium/engine`.
+- [3DTiles-Inspector](https://github.com/WilliamLiu-1997/3DTiles-Inspector) - ![GitHub stars](https://img.shields.io/github/stars/WilliamLiu-1997/3DTiles-Inspector?style=flat&logo=github) 🆕 **New** 交互式 3D Tiles 编辑器，支持地理变换对齐、几何误差调节与高斯泼溅裁剪.
 
 ## 生态系统
 
@@ -196,9 +211,11 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 
 塑造 Cesium 生态的技术与方向。
 
-**AI 与 MCP** — cesium-ai-integrations 提供 MCP 服务器与 Agent 技能；社区 cesium-mcp 支持自然语言控制 3D 地球。
+**AI 与 MCP** — Sandcastle Copilot（自带 Key）提供浏览器内编程辅助；官方 `cesiumjs-skills` 与 `cesium-ai-integrations`；社区 `cesium-mcp` 支持自然语言控制 3D 地球。
 
-**3D 高斯泼溅** — CesiumJS 通过 SPZ 格式与 spz-loader 提供日趋成熟的实验性支持；v1.140 带来显著的加载与渲染性能提升。
+**3D 高斯泼溅** — 经 `KHR_gaussian_splatting` / SPZ 与 `spz-loader` 进入可生产路径；ion 瓦片化与 CesiumJS 1.14x 持续优化加载与渲染性能。
+
+**3D Tiles 原生矢量** — CesiumJS 1.142+ 支持 ion 矢量瓦片、`MVTDataProvider` 与 `GeoJsonPrimitive`，可绕过 Entity 层实现高性能矢量渲染。
 
 **3D Tiles Next** — 流式规范演进；实验性支持请关注 Cesium 官方博客。
 
@@ -275,11 +292,11 @@ Cesium 生态正在快速与 AI 系统集成。本节涵盖 MCP 服务器、Agen
 ---
 
 > 最后更新：2026 年 7 月。
-> 活跃资源：65+。
+> 活跃资源：79+。
 > 已归档：17。
 > 分类数：16。
 
-主列表仅含活跃维护资源，基于 CesiumJS 1.x（当前 1.140）。详见[收录标准](docs/INCLUSION_CRITERIA.zh.md)。
+主列表仅含活跃维护资源，基于 CesiumJS 1.x（当前 1.143）。详见[收录标准](docs/INCLUSION_CRITERIA.zh.md)。
 
 ---
 

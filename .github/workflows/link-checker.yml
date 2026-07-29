@@ -10,22 +10,26 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   link-checker:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
-        
+        node-version: '22'
+
     - name: Install markdown-link-check
       run: npm install -g markdown-link-check
-      
+
     - name: Create link-check config
       run: |
         cat > .markdown-link-check.json << EOF
@@ -51,26 +55,23 @@ jobs:
           "aliveStatusCodes": [200, 206]
         }
         EOF
-        
+
     - name: Check links in README
       run: |
         markdown-link-check README.md --config .markdown-link-check.json
         markdown-link-check readme-zh.md --config .markdown-link-check.json
-        
+
     - name: Check links in CONTRIBUTING
       run: |
         markdown-link-check CONTRIBUTING.md --config .markdown-link-check.json
-        
-    - name: Create issue on link failure
-      if: failure()
+
+    - name: Create or update issue on link failure
+      if: failure() && github.event_name != 'pull_request'
       uses: actions/github-script@v7
       with:
         script: |
-          const issue = await github.rest.issues.create({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            title: '🔗 Broken Links Detected',
-            body: `## Link Checker Report
+          const title = 'Broken Links Detected';
+          const body = `## Link Checker Report
 
           The automated link checker has detected broken links in the repository.
 
@@ -85,8 +86,32 @@ jobs:
           2. Update or remove broken links
           3. Re-run the workflow to verify fixes
 
-          This issue was automatically created by the link checker workflow.`,
-            labels: ['bug', 'automated', 'links']
+          This issue was automatically created by the link checker workflow.`;
+
+          const { data: issues } = await github.rest.issues.listForRepo({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open',
+            labels: 'links'
           });
-          
-          console.log(`Created issue: ${issue.data.html_url}`); 
+
+          const existingIssue = issues.find(issue => issue.title.includes('Broken Links'));
+
+          if (existingIssue) {
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: existingIssue.number,
+              body: `## Updated Link Check\n\n${body}`
+            });
+            console.log(`Updated existing issue #${existingIssue.number}`);
+          } else {
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ['bug', 'automated', 'links']
+            });
+            console.log(`Created issue: ${issue.data.html_url}`);
+          }
